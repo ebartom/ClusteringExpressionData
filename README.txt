@@ -11,12 +11,12 @@ Rscript makeHeatmapFromGeneListAndTable.R --geneListFile=longPattern29.tairOnly.
 Enjoy.
 
 Data files:
-BRstudy.normCounts.repMerged.txt -- normalized read counts for the study published in Vragovic et al., PNAS, 2015.
+BRstudy.normCounts.repMerged.txt -- normalized read counts for the study published in Vragovic et al., PNAS, 2015.  For visual simplicity in the resulting heatmaps, the expression data from replicates has been averaged, and only a single expression value is reported for each tissue and time point.
 epidermalWT.down3h.geneList.txt -- genes differentially expressed (adjusted p-value < 0.05) and repressed (fold change < 0) in the translatome of the epidermal tissue of the root after 3 hours of brassinosteroid treatment, based on the study published in Vragovic et al., PNAS, 2015.
 epidermalWT.up3h.geneList.txt -- genes differentially expressed (adjusted p-value < 0.05) and induced (fold change > 0) in the translatome of the epidermal tissue of the root after 3 hours of brassinosteroid treatment, based on the study published in Vragovic et al., PNAS, 2015.
 wholeRootWT.down3h.geneList.txt -- genes differentially expressed (adjusted p-value < 0.05) and repressed (fold change < 0) in the translatome of whole root after 3 hours of brassinosteroid treatment, based on the study published in Vragovic et al., PNAS, 2015.
 wholeRootWT.up3h.geneList.txt -- genes differentially expressed (adjusted p-value < 0.05) and induced (fold change > 0) in the translatome of whole root after 3 hours of brassinosteroid treatment, based on the study published in Vragovic et al., PNAS, 2015.
-longPattern29.tairOnly.txt -- a list of TAIR ids for genes in longitudinal pattern number 29, identified in the supplemental material of Brady et al., Science, 2007.
+longPattern29.tairOnly.txt -- a list of TAIR ids for genes in longitudinal pattern number 29, extracted from the supplemental material of Brady et al., Science, 2007.
 
 Results files from the example commands above:
 wholeRoot.up3h.clustered.txt
