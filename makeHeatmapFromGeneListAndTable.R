@@ -7,12 +7,10 @@ countFile<-sub('--countFile=','',args[grep('--countFile=',args)])
 # expression values.  It will pull out the set of interesting genes from
 # the matrix and make a heatmap from their expression.
 
-# NB: The items in the gene list need to be row names in the count file.
+# NB: The items in the gene list need to be row names in the count file,
+# and each row name needs to be unique.
 
 library(gplots)
-library(edgeR)
-library(biomaRt)
-
 
 ##----------load differentially expressed genes --------#
 print("Loading gene list")
@@ -73,7 +71,7 @@ pdf(pdfFile)
 gl.cor<-(cor(t(gl.counts),use="pairwise.complete.obs",method="pearson"))
 gl.cor.dist<-as.dist(1-gl.cor)
 gl.tree<-hclust(gl.cor.dist,method='average')
-heatmap.2(as.matrix(gl.counts),trace="none",dendrogram="row",scale="row",Rowv=as.dendrogram(gl.tree),Colv=NA,labRow=row.names(gl.counts),cexRow=1,colsep=0,rowsep=0,cexCol=1,margins=c(12,9),main=listLabel,col=colorRampPalette(c("blue","white","red"))(75))
+heatmap.2(as.matrix(gl.counts),trace="none",dendrogram="row",scale="row",Rowv=as.dendrogram(gl.tree),Colv=NA,labRow=row.names(gl.counts),cexRow=1,colsep=0,rowsep=0,cexCol=1,margins=c(12,9),main=listLabel)
 dev.off()
 gl.sorted <-gl.counts[rev(gl.tree$order),]
 write.table(gl.sorted,paste(listName,"clustered.txt",sep="."),sep="\t")
