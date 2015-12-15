@@ -1,6 +1,6 @@
 Welcome!
 
-makeHeatmapFromGeneListAndTable.R is an Rscript that can be used to draw a hierarchically clustered heatmap from gene expression data.  It takes as input a list of genes of interest, and a table of expression values.  The genes should be labels for rows in the table.  The script will pull out the table rows that match the gene list, heirarchically cluster them, and output both a heatmap and a clustered expression table.
+makeHeatmapFromGeneListAndTable.R is an Rscript that can be used to draw a hierarchically clustered heatmap from gene expression data.  It takes as input a list of genes of interest, and a table of expression values.  The genes should be labels for rows in the table.  The script will pull out the table rows that match the gene list, heirarchically cluster them, and output both a heatmap and a clustered expression table.  Note that the script will only work if the gene IDs / names correspond to unique rows within the table of gene expression data.
 
 To run the script, download it and some data files, and try running it like this on a command line terminal:
 
